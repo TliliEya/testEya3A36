@@ -1,0 +1,18 @@
+<table border="3">
+  <tr>
+    <td>id</td>
+    <td>nom</td>
+    <td>cnss</td>
+    <td>actions</td>
+  </tr>
+  {% for i in listfaculteeyatl %}
+  <tr>
+    <td>{{ i.id }}</td>
+    <td>{{ i.nom }}</td>
+    <td>{{ i.cnss }}</td>
+    <td>
+      <a href="{{ path('app_deletefaculteeyatl', {'id': i.id}) }}">delete</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>

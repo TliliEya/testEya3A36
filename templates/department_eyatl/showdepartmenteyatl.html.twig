@@ -1,0 +1,18 @@
+<table border="3">
+  <tr>
+    <td>id</td>
+    <td>mat</td>
+    <td>home</td>
+    <td>faculte_id</td>
+    <td>details</td>
+  </tr>
+  {% for i in listdepartmenteyatl %}
+  <tr>
+    <td>{{ i.id }}</td>
+    <td>{{ i.mat }}</td>
+    <td>{{ i.home }}</td>
+    <td>{{ i.faculte ? i.faculte.id : '' }}</td>
+    <td><a href="{{ path('app_detailsdepartmenteyatl', {'id': i.id}) }}">details</a></td>
+  </tr>
+  {% endfor %}
+</table>
